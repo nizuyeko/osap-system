@@ -1,0 +1,36 @@
+
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+
+    <mat-icon aria-label="Side nav toggle icon ">menu</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+
+
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>question_mark</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>notifications</mat-icon>
+  </button>
+
+
+  <div class="nav-item dropdown" ngbDropdown>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+      ngbDropdownToggle>
+      <mat-icon>person</mat-icon>
+    </button>
+
+
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
+      <mat-icon class="person_inside example-icon">person</mat-icon>
+      <span> {{username}}</span>
+
+      <a class="dropdown-item">edit profile</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" (click)="logout()" ngbDropdownItem>log out</a>
+    </div>
+  </div>
+</mat-toolbar>
+
+<ng-content selector=".content"></ng-content>
